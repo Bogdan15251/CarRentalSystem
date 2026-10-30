@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:carrental-test;LOCK_TIMEOUT=10000
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+
+# Small fleet so limits are easy to hit in tests
+rental:
+  fleet:
+    SEDAN: 2
+    SUV: 3
+    VAN: 1

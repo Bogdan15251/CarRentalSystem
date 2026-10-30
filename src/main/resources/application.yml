@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    # LOCK_TIMEOUT: concurrent reservations of the same type wait for the row lock instead of failing fast
+    url: jdbc:h2:mem:carrental;LOCK_TIMEOUT=10000
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+
+rental:
+  fleet:
+    SEDAN: 5
+    SUV: 3
+    VAN: 2
